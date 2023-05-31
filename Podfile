@@ -9,6 +9,7 @@ target 'Snapchat' do
 	# Add the Firebase pod for Google Analytics
   pod 'FirebaseAuth'
 	pod 'FirebaseAnalytics'
+  pod 'GoogleSignIn'
 end
 
 

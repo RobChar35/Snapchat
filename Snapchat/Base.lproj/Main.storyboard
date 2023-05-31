@@ -64,6 +64,21 @@
                                     <action selector="iniciarSesionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ieb-dw-KnJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iId-qg-Glv">
+                                <rect key="frame" x="107" y="525" width="200" height="50"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6kh-Dy-Bxf"/>
+                                    <constraint firstAttribute="width" constant="200" id="UY4-2R-koL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Iniciar Sesion con Google"/>
+                                <connections>
+                                    <action selector="goggleiOSTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nFE-F0-L37"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -71,6 +86,7 @@
                             <constraint firstItem="pd7-NT-MuH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7an-Ft-eWo"/>
                             <constraint firstItem="oTf-8i-BiH" firstAttribute="top" secondItem="77g-1S-PoZ" secondAttribute="bottom" constant="30" id="B6i-cH-NwF"/>
                             <constraint firstItem="eF6-VB-pRz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFd-Yh-biW"/>
+                            <constraint firstItem="iId-qg-Glv" firstAttribute="top" secondItem="oTf-8i-BiH" secondAttribute="bottom" constant="30" id="QIv-yA-0NS"/>
                             <constraint firstItem="pd7-NT-MuH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Wco-ik-7bB"/>
                             <constraint firstItem="oTf-8i-BiH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zo8-Ig-MPz"/>
                             <constraint firstItem="IX1-fe-qgY" firstAttribute="top" secondItem="eF6-VB-pRz" secondAttribute="bottom" constant="25" id="e0x-SE-ELv"/>
@@ -80,6 +96,7 @@
                             <constraint firstItem="eF6-VB-pRz" firstAttribute="top" secondItem="pd7-NT-MuH" secondAttribute="bottom" constant="25" id="tHS-Ge-efq"/>
                             <constraint firstItem="shJ-ZN-ue1" firstAttribute="top" secondItem="IX1-fe-qgY" secondAttribute="bottom" constant="25" id="v4f-3x-NkI"/>
                             <constraint firstItem="77g-1S-PoZ" firstAttribute="top" secondItem="shJ-ZN-ue1" secondAttribute="bottom" constant="25" id="vls-1j-ONQ"/>
+                            <constraint firstItem="iId-qg-Glv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xLo-l0-Xsy"/>
                         </constraints>
                     </view>
                     <connections>
@@ -96,6 +113,9 @@
         <image name="imagen" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
