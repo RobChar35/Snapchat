@@ -11,6 +11,8 @@ import FirebaseAuth
 import FirebaseCore
 import GoogleSignIn
 
+import FirebaseDatabase
+
 class iniciarSesionViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
@@ -30,10 +32,25 @@ class iniciarSesionViewController: UIViewController {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) {
             (user, error) in
             print("Intentando Iniciar Sesion")
+            
             if error != nil {
                 print("Se presento el siguiente error: \(error)")
+                
+                let alert = UIAlertController(title: "Usuario no válido", message: "No existe el usuario que acabas de ingresar", preferredStyle: .alert)
+                
+                let btnCrear = UIAlertAction(title: "Crear", style: .default, handler: {
+                    (UIAlertAction) in
+                    self.performSegue(withIdentifier: "registrarSegue", sender: nil)
+                })
+                
+                let btnCancelar = UIAlertAction(title: "Cancelar", style: .default, handler: {(UIAlertAction) in })
+                
+                alert.addAction(btnCrear)
+                alert.addAction(btnCancelar)
+                self.present(alert, animated: true, completion: nil)
             } else {
                 print("Inicio de sesion exitoso")
+                self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
             }
         }
     }
